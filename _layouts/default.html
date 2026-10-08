@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="logo">☕ Dinar Shop</a>
+    <a href="/cart/" class="cart-link">Keranjang (<span data-cart-count>0</span>)</a>
+  </header>
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer class="site-footer">© {{ site.time | date: "%Y" }} Dinar Shop</footer>
+  <script src="/assets/js/cart.js" defer></script>
+  {% if page.scripts %}{% for s in page.scripts %}<script src="{{ s }}" defer></script>{% endfor %}{% endif %}
+</body>
+</html>

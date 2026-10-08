@@ -1,0 +1,15 @@
+title: Dinar Shop
+url: ""
+baseurl: ""
+collections:
+  products:
+    output: true
+    permalink: "/produk/:title/"
+defaults:
+  - scope: { path: "", type: "products" }
+    values: { layout: "product" }
+  - scope: { path: "" }
+    values: { layout: "default" }
+sass:
+  sass_dir: _sass
+  style: compressed

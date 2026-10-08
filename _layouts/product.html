@@ -1,0 +1,22 @@
+---
+midtrans: false
+---
+<article class="product-detail">
+  <img src="{{ page.image }}" alt="{{ page.name }}" class="product-img">
+  <div class="product-info">
+    <h1>{{ page.name }}</h1>
+    <p class="price">Rp {{ page.price }}</p>
+    <p>{{ page.description }}</p>
+    <p>Stok: <span data-stock="{{ page.stock }}">{{ page.stock }}</span></p>
+    <label>Jumlah
+      <input type="number" data-qty value="1" min="1" max="{{ page.stock }}">
+    </label>
+    <button class="btn-primary" data-add-to-cart
+      data-id="{{ page.title }}"
+      data-name="{{ page.name }}"
+      data-price="{{ page.price }}"
+      data-image="{{ page.image }}">+ Tambah ke Keranjang</button>
+    <p class="added-msg" hidden>✔ Ditambahkan ke keranjang</p>
+  </div>
+  <div class="product-desc">{{ content }}</div>
+</article>

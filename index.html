@@ -1,0 +1,14 @@
+---
+title: Katalog — Dinar Shop
+---
+<h1>Produk Kami</h1>
+<div class="product-grid">
+  {% for product in site.products %}
+  <a href="{{ product.url }}" class="product-card">
+    <img src="{{ product.image }}" alt="{{ product.name }}">
+    <h3>{{ product.name }}</h3>
+    <p class="price">Rp {{ product.price }}</p>
+    <p class="desc">{{ product.description | truncatewords: 10 }}</p>
+  </a>
+  {% endfor %}
+</div>

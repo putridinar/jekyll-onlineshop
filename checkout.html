@@ -1,0 +1,19 @@
+---
+title: Checkout
+permalink: /checkout/
+midtrans: true
+scripts: ["/assets/js/checkout.js"]
+---
+<h1>Checkout</h1>
+<form id="checkout-form" class="checkout-form">
+  <label>Nama <input name="name" required></label>
+  <label>Email <input type="email" name="email" required></label>
+  <label>No. WhatsApp <input name="phone" required placeholder="08xxxxxxxxxx"></label>
+  <label>Alamat Pengiriman <textarea name="address" required></textarea></label>
+  <h3>Ringkasan Pesanan</h3>
+  <ul data-checkout-summary></ul>
+  <p>Total: Rp <span data-cart-total>0</span></p>
+  <button type="submit" class="btn-primary">Bayar dengan Midtrans</button>
+  <p class="checkout-status" data-status></p>
+</form>
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="REPLACE_WITH_CLIENT_KEY" defer></script>
