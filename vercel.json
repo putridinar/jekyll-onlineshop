@@ -1,5 +1,4 @@
 {
   "buildCommand": "bundle exec jekyll build",
-  "outputDirectory": "_site",
-  "functions": { "api/**/*.js": { "runtime": "nodejs18.x" } }
+  "outputDirectory": "_site"
 }
